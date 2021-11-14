@@ -247,4 +247,4 @@ snake();
 
 function play() {
   location.reload();
-}
+} 

@@ -231,7 +231,7 @@ function stop() {
   deadSnake = 1; // il punem aici ca sa nu se repete inutuil dupa fiecare apelare a functiei stop
   document.getElementById("lost").innerHTML += `
   <p class = "GameOver">Game Over</p>
-  <img class="bang" src="/pics/unnamed.png" alt="">`; // acelasi motiv ca mai sus
+  <img class="bang" src="/unnamed.png" alt="">`; // acelasi motiv ca mai sus
 }
 
 function checkBox(position) {

@@ -20,6 +20,7 @@
 .mineSweeperImage, .SnakeImage {
     width: 300px;
     height: 225px;
+    border-radius: 15px:
 }
 
 .buttonMinesweeper, .buttonSnake {

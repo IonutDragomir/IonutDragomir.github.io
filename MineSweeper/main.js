@@ -23,7 +23,6 @@ function createBombCoordinates() {
         bombPosition.x == bombCoordinates[length - 1].x &&
         bombPosition.y == bombCoordinates[length - 1].y
       ) {
-        // setam ca exista deja bomba cu aceste coordonate
         alreadyExist = true;
       }
       --length;
@@ -32,8 +31,6 @@ function createBombCoordinates() {
     if (!alreadyExist) {
       bombCoordinates.push(bombPosition);
     } else {
-      //daca exista deja bomba cu aceste coordonate,
-      // il scadem pe i ca sa se repete procesul pana cand avem un numar valid de bombe
       --i;
     }
   }
@@ -68,10 +65,7 @@ function displaySquare() {
         digSquare(gameBoard, gameBoard[i][j]);
       });
       gameBoard[i][j].element.addEventListener("contextmenu", (elementJ) => {
-        //prevenim mesaul cand apasam click dreapta
         elementJ.preventDefault();
-
-        //marcam patratelele pe care le consideram bombe
         markSquare(gameBoard[i][j].element);
       });
     }
@@ -105,7 +99,6 @@ function markSquare(element) {
     element.dataset.status = statusTerrain;
     ++bombsLeft.textContent;
   } else if (bombsLeft.textContent > 0) {
-    // if ul ne ajuta sa nu marcam mai multe patratele decat avem bombe
     element.dataset.status = statusMarked;
     --bombsLeft.textContent;
   }
@@ -139,7 +132,6 @@ function digSquare(arrayOfSquares, square) {
 }
 
 function increaseClue(arrayOfSquares, square) {
-  //selectam toate patratelele adiacente patratelei pe care noi o apasam
   let adjacent = [];
   for (let topToBottom = square.x - 1; topToBottom <= square.x + 1; ++topToBottom) {
     for (let leftToRight = square.y - 1; leftToRight <= square.y + 1; ++leftToRight) {
@@ -149,9 +141,6 @@ function increaseClue(arrayOfSquares, square) {
     }
   }
 
-  //verific in sirul adjacent daca sunt elemente cu mine true
-  //daca sunt, cresc indiciul in functie de cate bombe sunt in matricea de 3X3 a patratului
-  //pe care l am apasat
   let clue = 0;
   for (let index = 0; index < adjacent.length; ++index) {
     if (adjacent[index].mine) {

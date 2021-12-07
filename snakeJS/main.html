@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/snakeJS/main.css" />
+    <title>Snake</title>
+    <link
+      rel="icon"
+      href="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/000000/external-snake-st-patrick-day-vitaliy-gorbachev-flat-vitaly-gorbachev.png"
+      type="image/icon"
+    />
+  </head>
+  <body>
+    <button class="play" type="button" onclick="return play();">
+      <img src="/snakeJS/PlayButton.png" alt="" />
+    </button>
+    <button class="plusSpeed" type="button" onclick="return plusSpeed();">
+      <img
+        src="https://img.icons8.com/glyph-neue/64/000000/plus-math.png"
+        alt="plus sign"
+      />
+    </button>
+    <button class="minusSpeed" type="button" onclick="return minusSpeed();">
+      <img
+        src="https://img.icons8.com/external-becris-lineal-becris/64/000000/external-remove-mintab-for-ios-becris-lineal-becris.png"
+        alt="minus sign"
+      />
+    </button>
+
+    <div class="score">
+      <img
+        src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-apple-fruits-and-vegetables-kiranshastry-lineal-color-kiranshastry.png"
+        class="showApple"
+        alt="red apple"
+      />
+      <p id="scoreNumber">0</p>
+    </div>
+    <div id="lost">
+      <div id="grid">
+        <img src="/snakeJS/terrain.png" alt="big square of grass"/>
+        <img
+          src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-apple-fruits-and-vegetables-kiranshastry-lineal-color-kiranshastry.png"
+          id="apple"
+          alt="red apple"
+        />
+        <div class="box"></div>
+        <div class="box" id="body"></div>
+        <div class="box" id="head"></div>
+      </div>
+    </div>
+
+    <script src="/snakeJS/main.js"></script>
+  </body>
+</html>
